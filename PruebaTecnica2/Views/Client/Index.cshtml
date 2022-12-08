@@ -1,0 +1,58 @@
+﻿@*@model List<Application.ViewModels.Client.ClientViewModel>
+
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col-3 offset-9">
+            <a onclick="showInPopup('@Url.Action("Create","Client",null,Context.Request.Scheme)','')" class="btn btn-success">Crear cliente</a>
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach(Application.ViewModels.Client.ClientViewModel item in Model)
+        {
+            <div class="col-4 mb-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4>@item.ClientName</h4>
+                        <h6>@item.ClientDirection</h6>
+                        <div class="d-flex justify-content-between align-items-center gap-3">
+                            <div>
+                                <a onclick="showInPopup('@Url.Action("Update","Client",new {id = item.Id},Context.Request.Scheme)','')" class="btn btn-sm btn-outline-info">Editar</a>
+                                <button type="button" data-id="@item.Id" class="btn btn-sm btn-outline-danger deleteBtn">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<form id="deleteForm" asp-action="Remove">
+
+    <input type="hidden" id="clientId" name="Id" />
+
+</form>
+
+@section Scripts{
+    <script>
+        $(function(){
+            $('.deleteBtn').click(function(e){
+                swal({
+                    title: "¿Está seguro?",
+                    text: "¿Está seguro que desea eliminar el producto?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true
+                }).then((confirm) => {
+                    if(confirm){
+                        var btn = $(this);
+                        var id = btn.data("id");
+                        $("#clientId").val(id);
+                        $("#deleteForm").submit();
+                    }
+                })
+            })
+        })
+    </script>
+}*@

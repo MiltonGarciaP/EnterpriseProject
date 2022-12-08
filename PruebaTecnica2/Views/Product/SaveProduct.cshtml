@@ -1,0 +1,39 @@
+﻿@*@model Application.ViewModels.Product.ProductViewModel
+
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 offset-sm-3">
+            <div class="card">
+                <div class="card-title bg-dark fw-bold text-light">
+                    <div class="text-center">@(editMode ? $"Editando el producto" : "Creando un producto")</div>
+                </div>
+                <div class="card-body">
+
+                    <form asp-controller="Product" asp-action="@(editMode ? "Update" : "Create")">
+
+
+                        <div class="mb-3">
+                            <label asp-for="ProductName" class="form-label">Nombre del producto</label>
+                            <input asp-for="ProductName" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Price" class="form-label">Precio</label>
+                            <input asp-for="Price" class="form-control" />
+                        </div>
+
+                        <input type="hidden" asp-for="Id" />
+
+
+                        <input type="submit" value="@(editMode ? "Editar" : "Guardar")" class="btn btn-primary"/>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@

@@ -1,0 +1,63 @@
+﻿@*@model List<Application.ViewModels.Order.OrderViewModel>
+
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col-3 offset-9">
+            <a onclick="showInPopup('@Url.Action("Create","Order",null,Context.Request.Scheme)','')" class="btn btn-success">Crear Orden</a>
+        </div>
+    </div>
+
+    <div class="row">
+        @foreach(Application.ViewModels.Order.OrderViewModel item in Model)
+        {
+            <div class="col-4 mb-3">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h6>Número de orden: @item.Id</h6>
+                        <h6>Cliente: @item.ClientName</h6>
+                        <h6>Producto: @item.ProductName</h6>
+                        <h6>Cantidad: @item.Amount</h6>
+                        <h6>Monto a pagar: RD$@(item.Amount * item.Price)</h6>
+                        <h6>Dirección: @item.ClientDirection</h6>
+                        <h6>Fecha de entrega: @item.DeliveryDate</h6>
+                        <div class="d-flex justify-content-between align-items-center gap-3">
+                            <div>
+                                <a onclick="showInPopup('@Url.Action("Update","Order",new {id = item.Id},Context.Request.Scheme)','')" class="btn btn-sm btn-outline-info">Editar</a>
+                                <button type="button" data-id="@item.Id" class="btn btn-sm btn-outline-danger deleteBtn">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<form id="deleteForm" asp-action="Remove">
+
+    <input type="hidden" id="orderId" name="Id" />
+
+</form>
+
+@section Scripts{
+    <script>
+        $(function(){
+            $('.deleteBtn').click(function(e){
+                swal({
+                    title: "¿Está seguro?",
+                    text: "¿Está seguro que desea eliminar la orden?",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true
+                }).then((confirm) => {
+                    if(confirm){
+                        var btn = $(this);
+                        var id = btn.data("id");
+                        $("#orderId").val(id);
+                        $("#deleteForm").submit();
+                    }
+                })
+            })
+        })
+    </script>
+}*@
