@@ -10,5 +10,17 @@ namespace Application.ViewModels.Payroll
     {
         public int Id { get; set; }
         public double Earnings { get; set; }
+
+        public double afp { get; set; }
+
+        public double sfs { get; set; }
+
+        public double isr { get; set; }
+
+        public double Discount { get; set; }
+
+        public double Earning { get; set; }
+
+
     }
 }

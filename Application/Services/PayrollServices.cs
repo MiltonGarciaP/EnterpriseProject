@@ -2,6 +2,9 @@
 using Application.ViewModels.Payroll;
 using Database;
 using Database.Entities;
+using Microsoft.AspNetCore.Mvc.Abstractions;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
+using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,10 +46,24 @@ namespace Application.Services
         {
             var payrollList = await _payrollRepository.GetAllWithIncludeAsync(new List<string> { "Employees" });
 
+
+
+            
+
             return payrollList.Select(client => new PayrollViewModel
             {
-                Id = client.Id,
-                Earnings = client.Earnings
+                
+
+            Id = client.Id,
+                Earnings = client.Earnings,
+                afp = client.Earnings * 0.0287,
+                sfs = client.Earnings * 0.0304,
+                Discount = (client.Earnings * 0.0287) + (client.Earnings * 0.0304),
+                Earning = client.Earnings- ((client.Earnings * 0.0287) + (client.Earnings * 0.0304)),
+                
+                
+                
+
             }).ToList();
         }
 
