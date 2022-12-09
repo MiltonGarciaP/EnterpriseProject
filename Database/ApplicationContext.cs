@@ -54,14 +54,10 @@ namespace Database
                 modelBuilder.Entity<Employee>().Property(employee => employee.DOB).IsRequired();
                 modelBuilder.Entity<Employee>().Property(employee => employee.DOA).IsRequired();
                 modelBuilder.Entity<Employee>().Property(employee => employee.IdCard).IsRequired();
-                modelBuilder.Entity<Employee>().Property(employee => employee.Wage).IsRequired();
             #endregion
 
             #region payroll
                 modelBuilder.Entity<Payroll>().Property(payroll => payroll.Earnings).IsRequired();
-                modelBuilder.Entity<Payroll>().Property(payroll => payroll.AFP).IsRequired();
-                modelBuilder.Entity<Payroll>().Property(payroll => payroll.ISS).IsRequired();
-                modelBuilder.Entity<Payroll>().Property(payroll => payroll.Neto).IsRequired();
             #endregion
 
             #region vacantion

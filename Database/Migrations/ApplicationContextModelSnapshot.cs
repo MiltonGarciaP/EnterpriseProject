@@ -65,9 +65,6 @@ namespace Database.Migrations
                     b.Property<int>("VacantionId")
                         .HasColumnType("int");
 
-                    b.Property<double>("Wage")
-                        .HasColumnType("float");
-
                     b.HasKey("Id");
 
                     b.HasIndex("PayrollId");
@@ -85,16 +82,7 @@ namespace Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<double>("AFP")
-                        .HasColumnType("float");
-
                     b.Property<double>("Earnings")
-                        .HasColumnType("float");
-
-                    b.Property<double>("ISS")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Neto")
                         .HasColumnType("float");
 
                     b.HasKey("Id");

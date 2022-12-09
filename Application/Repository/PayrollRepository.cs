@@ -58,5 +58,10 @@ namespace Application.Repository
             _dbContext.Entry(payroll).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
         }
+
+        public double GetAmount(int id)
+        {
+            return _dbContext.Set<Payroll>().FindAsync(id).Result.Earnings;
+        }
     }
 }

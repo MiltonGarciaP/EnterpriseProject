@@ -13,10 +13,14 @@ namespace Application.Services
     public class EmployeeServices : IHelpersServices<EmployeeViewModel>
     {
         private readonly EmployeeRepository _employeeRepository;
+        private readonly PayrollRepository _payrollRepository;
+        private readonly VacantionRepository _vacantionRepository;
 
         public EmployeeServices(ApplicationContext dbContext)
         {
             _employeeRepository = new(dbContext);
+            _payrollRepository = new(dbContext);
+            _vacantionRepository = new(dbContext);
         }
 
         public async Task<EmployeeViewModel> Add(EmployeeViewModel vm)
@@ -29,7 +33,6 @@ namespace Application.Services
             employee.DOB = vm.DOB;
             employee.DOA = vm.DOA;
             employee.Position = vm.Position;
-            employee.Wage = vm.Wage;
             employee.PayrollId = vm.PayrollId;
             employee.VacantionId = vm.VacantionId;
 
@@ -44,7 +47,6 @@ namespace Application.Services
             pvm.DOB = employee.DOB;
             pvm.DOA = employee.DOA;
             pvm.Position = employee.Position;
-            pvm.Wage = employee.Wage;
             pvm.PayrollId = employee.PayrollId;
             pvm.VacantionId = employee.VacantionId;
 
@@ -70,11 +72,12 @@ namespace Application.Services
                 IdCard = product.IdCard,
                 DOA = product.DOA,
                 DOB = product.DOB,
-                Wage = product.Wage,
                 Position = product.Position,
-                PayrollId = product.PayrollId,
-                VacantionId = product.VacantionId
-
+                Wage = _payrollRepository.GetAmount(product.PayrollId),
+                //PayrollId = product.PayrollId,
+                //VacantionId = product.VacantionId,
+                StartingDate = _vacantionRepository.GetVacationStartingDate(product.VacantionId),
+                EndingDate = _vacantionRepository.GetVacantionEndingDate(product.VacantionId)
             }).ToList();
         }
 
@@ -90,7 +93,6 @@ namespace Application.Services
             vm.IdCard = employee.IdCard;
             vm.DOA = employee.DOA;
             vm.DOB = employee.DOB;
-            vm.Wage = employee.Wage;
             vm.Position = employee.Position;
             vm.PayrollId = employee.PayrollId;
             vm.VacantionId = employee.VacantionId;
@@ -110,7 +112,6 @@ namespace Application.Services
             employee.DOB = vm.DOB;
             employee.DOA = vm.DOA;
             employee.Position = vm.Position;
-            employee.Wage = vm.Wage;
             employee.PayrollId = vm.PayrollId;
             employee.VacantionId = vm.VacantionId;
 

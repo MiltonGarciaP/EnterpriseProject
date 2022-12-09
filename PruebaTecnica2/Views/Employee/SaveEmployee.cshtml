@@ -34,7 +34,7 @@
 
                         <div class="mb-3">
                             <label asp-for="IdCard" class="form-label">Cedula</label>
-                            <input asp-for="Wage" class="form-control" />
+                            <input asp-for="IdCard" class="form-control" />
                         </div>
 
                         <div class="mb-3">
@@ -48,8 +48,10 @@
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="PayrollId" class="form-label">Id del payroll</label>
-                            <input asp-for="PayrollId" class="form-control" />
+                            <label asp-for="PayrollId" class="form-label">Salario</label>
+                            <select asp-for="PayrollId" asp-items="@(new SelectList(Model.Payrolls,"Id","Earnings"))" class="form-control">
+                                <option value="0" disabled>Seleccione una opción</option>
+                            </select>
                         </div>
 
                         <div class="mb-3">

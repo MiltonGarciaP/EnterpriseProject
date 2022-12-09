@@ -22,18 +22,12 @@ namespace Application.Services
         public async Task<PayrollViewModel> Add(PayrollViewModel vm)
         {
             Payroll payroll = new();
-            payroll.ISS = vm.ISS;
-            payroll.AFP = vm.AFP;
-            payroll.Neto = vm.Neto;
             payroll.Earnings = vm.Earnings;
 
             payroll = await _payrollRepository.AddAsync(payroll);
 
             PayrollViewModel cvm = new();
             cvm.Id = payroll.Id;
-            cvm.ISS = payroll.ISS;
-            cvm.AFP = payroll.AFP;
-            cvm.Neto = payroll.Neto;
             cvm.Earnings = payroll.Earnings;
 
             return cvm;
@@ -52,10 +46,7 @@ namespace Application.Services
             return payrollList.Select(client => new PayrollViewModel
             {
                 Id = client.Id,
-                AFP = client.AFP,
-                ISS = client.ISS,
-                Earnings = client.Earnings,
-                Neto = client.Neto
+                Earnings = client.Earnings
             }).ToList();
         }
 
@@ -65,10 +56,7 @@ namespace Application.Services
 
             PayrollViewModel vm = new();
             vm.Id = payroll.Id;
-            vm.AFP = payroll.AFP;
-            vm.ISS = payroll.ISS;
             vm.Earnings = payroll.Earnings;
-            vm.Neto = payroll.Neto;
 
             return vm;
         }
@@ -78,10 +66,7 @@ namespace Application.Services
             var payroll = await _payrollRepository.GetByIdAsync(vm.Id);
 
             payroll.Id = vm.Id;
-            payroll.AFP = vm.AFP;
-            payroll.ISS = vm.ISS;
             payroll.Earnings = vm.Earnings;
-            payroll.Neto = payroll.Neto;
 
             await _payrollRepository.UpdateAsync(payroll);
         }

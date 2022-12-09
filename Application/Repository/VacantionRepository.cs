@@ -57,5 +57,15 @@ namespace Application.Repository
             _dbContext.Entry(vacantion).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
         }
+
+        public DateTime GetVacationStartingDate(int id)
+        {
+            return _dbContext.Set<Vacantion>().FindAsync(id).Result.StartingDate;
+        }
+
+        public DateTime GetVacantionEndingDate(int id)
+        {
+            return _dbContext.Set<Vacantion>().FindAsync(id).Result.EndingDate;
+        }
     }
 }

@@ -8,9 +8,11 @@ namespace PruebaTecnica2.Controllers
     public class EmployeeController : Controller
     {
         private readonly EmployeeServices _employeeServices;
+        private readonly PayrollServices _payrollServices;
         public EmployeeController(ApplicationContext dbContext)
         {
             _employeeServices = new(dbContext);
+            _payrollServices = new(dbContext);
         }
 
         public async Task<IActionResult> Index() 
@@ -18,9 +20,10 @@ namespace PruebaTecnica2.Controllers
             return View(await _employeeServices.GetAllViewModel());
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             EmployeeViewModel vm = new();
+            vm.Payrolls = await _payrollServices.GetAllViewModel();
             return View("SaveEmployee", vm);
         }
 

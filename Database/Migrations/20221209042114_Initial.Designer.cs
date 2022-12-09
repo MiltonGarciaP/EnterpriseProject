@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20221208053944_Initial")]
+    [Migration("20221209042114_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,9 +67,6 @@ namespace Database.Migrations
                     b.Property<int>("VacantionId")
                         .HasColumnType("int");
 
-                    b.Property<double>("Wage")
-                        .HasColumnType("float");
-
                     b.HasKey("Id");
 
                     b.HasIndex("PayrollId");
@@ -87,16 +84,7 @@ namespace Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<double>("AFP")
-                        .HasColumnType("float");
-
                     b.Property<double>("Earnings")
-                        .HasColumnType("float");
-
-                    b.Property<double>("ISS")
-                        .HasColumnType("float");
-
-                    b.Property<double>("Neto")
                         .HasColumnType("float");
 
                     b.HasKey("Id");

@@ -15,10 +15,7 @@ namespace Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Earnings = table.Column<double>(type: "float", nullable: false),
-                    AFP = table.Column<double>(type: "float", nullable: false),
-                    ISS = table.Column<double>(type: "float", nullable: false),
-                    Neto = table.Column<double>(type: "float", nullable: false)
+                    Earnings = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -51,7 +48,6 @@ namespace Database.Migrations
                     Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     DOA = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Wage = table.Column<double>(type: "float", nullable: false),
                     Position = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     VacantionId = table.Column<int>(type: "int", nullable: false),
                     PayrollId = table.Column<int>(type: "int", nullable: false)

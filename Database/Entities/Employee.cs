@@ -16,7 +16,6 @@ namespace Database.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime DOA { get; set; }
-        public double Wage { get; set; }
         public string Position { get; set; }
 
         public int VacantionId { get; set; }

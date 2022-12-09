@@ -26,3 +26,17 @@ C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimest
 C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Database\obj\Debug\net6.0\Database.pdb
 C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Database\obj\Debug\net6.0\Database.genruntimeconfig.cache
 C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Database\obj\Debug\net6.0\ref\Database.dll
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\bin\Debug\net6.0\Database.deps.json
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\bin\Debug\net6.0\Database.runtimeconfig.json
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\bin\Debug\net6.0\Database.dll
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\bin\Debug\net6.0\Database.pdb
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\Database.csproj.AssemblyReference.cache
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\Database.AssemblyInfoInputs.cache
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\Database.AssemblyInfo.cs
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\Database.csproj.CoreCompileInputs.cache
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\Database.dll
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\refint\Database.dll
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\Database.pdb
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\Database.genruntimeconfig.cache
+C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\Database\obj\Debug\net6.0\ref\Database.dll

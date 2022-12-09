@@ -17,13 +17,17 @@ namespace Application.ViewModels.Employee
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime DOA { get; set; }
-        public double Wage { get; set; }
         public string Position { get; set; }
 
+        public double Wage { get; set; }
+
+        public DateTime StartingDate { get; set; }
+        public DateTime EndingDate { get; set; }
+
         public int PayrollId { get; set; }
-        public PayrollViewModel Payroll { get; set; }
+        public List<PayrollViewModel> Payrolls { get; set; }
 
         public int VacantionId { get; set; }
-        public VacantionViewModel Vacantion { get; set; }
+        public List<VacantionViewModel> Vacantions { get; set; }
     }
 }
