@@ -1,16 +1,18 @@
 ﻿@model List<Application.ViewModels.Employee.EmployeeViewModel>
 
+
+
 <div class="container-fluid">
     <div class="row mb-3">
         <div class="col-3 offset-9">
-            <a asp-controller="Employee" asp-action="Create" class="btn btn-success">Crear Empleado</a>
+            <a onclick="showInPopup('@Url.Action("Create","Employee",null,Context.Request.Scheme)','')" class="btn btn-success">Crear Empleado</a>
         </div>
     </div>
 
     <div class="row">
         @foreach(Application.ViewModels.Employee.EmployeeViewModel item in Model)
         {
-            <div class="col-4 mb-3">
+            <div class="col-6 mb-3">
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <h4>Nombre del Empleado: @item.EmployeeName</h4>
@@ -18,12 +20,10 @@
                         <h6>Numero de celular: @item.PhoneNumber</h6>
                         <h6>Cedula: @item.IdCard</h6>
                         <h6>Posición @item.Position</h6>
-                        <h6>Sueldo: @item.Wage</h6>
+                        <h6>Sueldo: RD$@item.Wage</h6>
                         <h6>Fecha de inicio de las vacaciones: @item.StartingDate</h6>
                         <h6>Fecha de finalización de las vacaciones: @item.EndingDate</h6>
                         
-                        
-
                         <div class="d-flex justify-content-between align-items-center gap-3">
                             <div>
                                 <a asp-controller="Employee" asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">Editar</a>

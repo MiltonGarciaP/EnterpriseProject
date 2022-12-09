@@ -37,7 +37,9 @@ namespace PruebaTecnica2.Controllers
 
         public async Task<IActionResult> Update(int id)
         {
-            return View("SaveEmployee", await _employeeServices.GetByIdViewModel(id));
+            EmployeeViewModel vm = await _employeeServices.GetByIdViewModel(id);
+            vm.Payrolls = await _payrollServices.GetAllViewModel();
+            return View("SaveEmployee", vm);
         }
 
         [HttpPost]

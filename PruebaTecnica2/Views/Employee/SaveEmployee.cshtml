@@ -2,6 +2,7 @@
 
 @{
     bool editMode = Model.Id == 0 ? false : true;
+    Layout = null;
 }
 
 <div class="container-fluid">
@@ -55,7 +56,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="VacantionId" class="form-label">Id de las vacaciones</label>
+                            <label asp-for="VacantionId" class="form-label">Vacaciones</label>
                             <input asp-for="VacantionId" class="form-control" />
                         </div>
 
