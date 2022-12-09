@@ -1,4 +1,4 @@
-﻿@*@model Application.ViewModels.Client.ClientViewModel
+﻿@model Application.ViewModels.Vacations.VacantionViewModel
 
 @{
     bool editMode = Model.Id == 0 ? false : true;
@@ -10,20 +10,20 @@
         <div class="col-7 offset-sm-3">
             <div class="card">
                 <div class="card-title bg-dark fw-bold text-light">
-                    <div class="text-center">@(editMode ? $"Editando el cliente {Model.ClientName}" : "Creando un cliente")</div>
+                    <div class="text-center">@(editMode ? $"Editando la vaciones {Model.Id}" : "Creando unas vacaciones")</div>
                 </div>
                 <div class="card-body">
 
-                    <form asp-controller="Client" asp-action="@(editMode ? "Update" : "Create")">
+                    <form asp-controller="Vacantions" asp-action="@(editMode ? "Update" : "Create")">
                                                 
                         <div class="mb-3">
-                            <label asp-for="ClientName" class="form-label">Nombre del cliente</label>
-                            <input asp-for="ClientName" class="form-control" />
+                            <label asp-for="StartingDate" class="form-label">Inicio de la vacaciones</label>
+                            <input asp-for="StartingDate" class="form-control" />
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="ClientDirection" class="form-label">Dirección del cliente</label>
-                            <input asp-for="ClientDirection" class="form-control" />
+                            <label asp-for="EndingDate" class="form-label">Dirección del cliente</label>
+                            <input asp-for="EndingDate" class="form-control" />
                         </div>
 
                         <input type="hidden" asp-for="Id" />
@@ -35,4 +35,4 @@
             </div>
         </div>
     </div>
-</div>*@
+</div>

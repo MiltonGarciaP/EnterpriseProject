@@ -5,60 +5,61 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PruebaTecnica2
 build_property.RootNamespace = PruebaTecnica2
-build_property.ProjectDir = C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\PruebaTecnica2\
+build_property.ProjectDir = C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\PruebaTecnica2\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Jaime Terrero\Documents\GitHub\EnterpriseProject\PruebaTecnica2
+build_property.MSBuildProjectDirectory = C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\PruebaTecnica2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Client/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Client/SaveClient.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XFNhdmVDbGllbnQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Employee/Index.cshtml]
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Employee/SaveEmployee.cshtml]
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Employee/SaveEmployee.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcU2F2ZUVtcGxveWVlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Order/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Payroll/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Order/SaveOrder.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcU2F2ZU9yZGVyLmNzaHRtbA==
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Payroll/SavePayroll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5cm9sbFxTYXZlUGF5cm9sbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Shared/Error.cshtml]
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/_ViewImports.cshtml]
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Vacantions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW50aW9uc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Vacantions/SaveVacation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW50aW9uc1xTYXZlVmFjYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/_ViewStart.cshtml]
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jaime Terrero/Documents/GitHub/EnterpriseProject/PruebaTecnica2/Views/Shared/_Layout.cshtml]
+[C:/Users/DELL/Desktop/Archivos de milton/ITLA/Trabajos ITLA/7.Septimo Cuatrimestre/Ingenieria de Software/Trabajo Final/Proyecto2/PruebaTecnica2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ovc11zmv0g

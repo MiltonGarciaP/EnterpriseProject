@@ -22,26 +22,26 @@ namespace PruebaTecnica2.Controllers
         public IActionResult Create()
         {
             PayrollViewModel vm = new();
-            return View("SaveProduct", vm);
+            return View("SavePayroll", vm);
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(PayrollViewModel vm)
         {
             await _payrollServices.Add(vm);
-            return RedirectToRoute(new { controller = "Product", action = "Index" });
+            return RedirectToRoute(new { controller = "Payroll", action = "Index" });
         }
 
         public async Task<IActionResult> Update(int id)
         {
-            return View("SaveProduct", await _payrollServices.GetByIdViewModel(id));
+            return View("SavePayroll", await _payrollServices.GetByIdViewModel(id));
         }
 
         [HttpPost]
         public async Task<IActionResult> Update(PayrollViewModel vm)
         {
             await _payrollServices.Update(vm);
-            return RedirectToRoute(new { controller = "Product", action = "Index" });
+            return RedirectToRoute(new { controller = "Payroll", action = "Index" });
         }
 
         public async Task<IActionResult> Remove(int id)

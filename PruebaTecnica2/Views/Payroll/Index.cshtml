@@ -1,23 +1,30 @@
-﻿@*@model List<Application.ViewModels.Client.ClientViewModel>
+﻿@model List<Application.ViewModels.Payroll.PayrollViewModel>
 
 <div class="container-fluid">
     <div class="row mb-3">
         <div class="col-3 offset-9">
-            <a onclick="showInPopup('@Url.Action("Create","Client",null,Context.Request.Scheme)','')" class="btn btn-success">Crear cliente</a>
+            <a onclick="showInPopup('@Url.Action("Create","Payroll",null,Context.Request.Scheme)','')" class="btn btn-success">Crear Sueldos</a>
         </div>
     </div>
 
     <div class="row">
-        @foreach(Application.ViewModels.Client.ClientViewModel item in Model)
+        @foreach(Application.ViewModels.Payroll.PayrollViewModel item in Model)
         {
             <div class="col-4 mb-3">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h4>@item.ClientName</h4>
-                        <h6>@item.ClientDirection</h6>
+                        <h6>Id del Sueldo :@item.Id</h6>
+
+                        <h6>ISS : (@item.Earnings * 0.0287)</h6>
+                        <h6>AFP : (@item.Earnings * 0.0304)</h6>
+
+                        <h6> Sueldo Base : @item.Earnings</h6>
+                        <h6>Sueldo Bruto : @item.Earnings = (@item.Earnings * 0.0287) </h6>
+
+                        
                         <div class="d-flex justify-content-between align-items-center gap-3">
                             <div>
-                                <a onclick="showInPopup('@Url.Action("Update","Client",new {id = item.Id},Context.Request.Scheme)','')" class="btn btn-sm btn-outline-info">Editar</a>
+                                <a onclick="showInPopup('@Url.Action("Update","Payroll",new {id = item.Id},Context.Request.Scheme)','')" class="btn btn-sm btn-outline-info">Editar</a>
                                 <button type="button" data-id="@item.Id" class="btn btn-sm btn-outline-danger deleteBtn">Eliminar</button>
                             </div>
                         </div>
@@ -30,7 +37,7 @@
 
 <form id="deleteForm" asp-action="Remove">
 
-    <input type="hidden" id="clientId" name="Id" />
+    <input type="hidden" id="orderId" name="Id" />
 
 </form>
 
@@ -40,7 +47,7 @@
             $('.deleteBtn').click(function(e){
                 swal({
                     title: "¿Está seguro?",
-                    text: "¿Está seguro que desea eliminar el producto?",
+                    text: "¿Está seguro que desea eliminar la orden?",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true
@@ -48,11 +55,11 @@
                     if(confirm){
                         var btn = $(this);
                         var id = btn.data("id");
-                        $("#clientId").val(id);
+                        $("#orderId").val(id);
                         $("#deleteForm").submit();
                     }
                 })
             })
         })
     </script>
-}*@
+}

@@ -51,8 +51,8 @@ namespace Application.Services
             {
                 Id = vacantion.Id,
                 StartingDate = vacantion.StartingDate,
-                EndingDate = vacantion.EndingDate,
-                EmployeeName = _employeeRepository.GetEmployeeName(vacantion.Employees.First().Id)
+                EndingDate = vacantion.EndingDate
+                
             }).ToList();
         }
 

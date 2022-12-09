@@ -12,7 +12,6 @@ namespace Application.ViewModels.Vacations
         public int Id { get; set; }
         public DateTime StartingDate { get; set; }
         public DateTime EndingDate { get; set; }
-        public string EmployeeName { get; set; }
         public List<EmployeeViewModel> EmployeeViewModels { get; set; }
     }
 }
