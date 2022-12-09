@@ -1,23 +1,30 @@
-﻿@*@model List<Application.ViewModels.Product.ProductViewModel>
+﻿@model List<Application.ViewModels.Employee.EmployeeViewModel>
 
 <div class="container-fluid">
     <div class="row mb-3">
         <div class="col-3 offset-9">
-            <a asp-controller="Product" asp-action="Create" class="btn btn-success">Crear producto</a>
+            <a asp-controller="Employee" asp-action="Create" class="btn btn-success">Crear Empleado</a>
         </div>
     </div>
 
     <div class="row">
-        @foreach(Application.ViewModels.Product.ProductViewModel item in Model)
+        @foreach(Application.ViewModels.Employee.EmployeeViewModel item in Model)
         {
             <div class="col-4 mb-3">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h4>@item.ProductName</h4>
-                        <h6>RD$@item.Price</h6>
+                        <h4>Nombre del Empleado: @item.EmployeeName</h4>
+                        <h6>Salario: @item.Wage</h6>
+                        <h6>Correo: @item.Email</h6>
+                        <h6>Numero de celular: @item.PhoneNumber</h6>
+                        <h6>Cedula: @item.IdCard</h6>
+                        <h6>Posición @item.Position</h6>
+                        <h6>Fecha de Nacimiento: @item.DOB</h6>
+                        
+
                         <div class="d-flex justify-content-between align-items-center gap-3">
                             <div>
-                                <a onclick="showInPopup('@Url.Action("Update","Product",new {id = item.Id},Context.Request.Scheme)','')" class="btn btn-sm btn-outline-info">Editar</a>
+                                <a onclick="showInPopup('@Url.Action("Update","Employee",new {id = item.Id},Context.Request.Scheme)','')" class="btn btn-sm btn-outline-info">Editar</a>
                                 <button type="button" data-id="@item.Id" class="btn btn-sm btn-outline-danger deleteBtn">Eliminar</button>
                             </div>
                         </div>
@@ -41,7 +48,7 @@
             $('.deleteBtn').click(function(e){
                 swal({
                     title: "¿Está seguro?",
-                    text: "¿Está seguro que desea eliminar el producto?",
+                    text: "¿Está seguro que desea eliminar el empleado?",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true
@@ -56,4 +63,4 @@
             })
         })
     </script>
-}*@
+}

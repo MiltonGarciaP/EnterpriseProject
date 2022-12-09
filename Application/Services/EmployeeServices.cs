@@ -59,14 +59,14 @@ namespace Application.Services
 
         public async Task<List<EmployeeViewModel>> GetAllViewModel()
         {
-            var productList = await _employeeRepository.GetAllWithIncludeAsync(new List<string> { "Orders" });
+            var productList = await _employeeRepository.GetAllWithIncludeAsync(new List<string> { "Payroll" });
 
             return productList.Select(product => new EmployeeViewModel
             {
                 Id = product.Id,
                 EmployeeName = product.EmployeeName,
                 PhoneNumber = product.PhoneNumber,
-                Email = product.Email ,
+                Email = product.Email,
                 IdCard = product.IdCard,
                 DOA = product.DOA,
                 DOB = product.DOB,
@@ -74,6 +74,7 @@ namespace Application.Services
                 Position = product.Position,
                 PayrollId = product.PayrollId,
                 VacantionId = product.VacantionId
+
             }).ToList();
         }
 

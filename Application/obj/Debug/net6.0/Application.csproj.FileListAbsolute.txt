@@ -13,3 +13,18 @@ C:\Users\Jaime Terrero\source\repos\PruebaTecnica2\Application\obj\Debug\net6.0\
 C:\Users\Jaime Terrero\source\repos\PruebaTecnica2\Application\obj\Debug\net6.0\refint\Application.dll
 C:\Users\Jaime Terrero\source\repos\PruebaTecnica2\Application\obj\Debug\net6.0\Application.pdb
 C:\Users\Jaime Terrero\source\repos\PruebaTecnica2\Application\obj\Debug\net6.0\ref\Application.dll
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\bin\Debug\net6.0\Application.deps.json
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\bin\Debug\net6.0\Application.dll
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\bin\Debug\net6.0\Application.pdb
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\bin\Debug\net6.0\Database.dll
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\bin\Debug\net6.0\Database.pdb
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\Application.dll
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\refint\Application.dll
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\Application.pdb
+C:\Users\DELL\Desktop\Archivos de milton\ITLA\Trabajos ITLA\7.Septimo Cuatrimestre\Ingenieria de Software\Trabajo Final\Proyecto2\Application\obj\Debug\net6.0\ref\Application.dll

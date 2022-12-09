@@ -1,0 +1,70 @@
+﻿@model Application.ViewModels.Employee.EmployeeViewModel
+
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 offset-sm-3">
+            <div class="card">
+                <div class="card-title bg-dark fw-bold text-light">
+                    <div class="text-center">@(editMode ? $"Editando el empleado" : "Creando un empleado")</div>
+                </div>
+                <div class="card-body">
+
+                    <form asp-controller="Employee" asp-action="@(editMode ? "Update" : "Create")">
+
+
+                        <div class="mb-3">
+                            <label asp-for="EmployeeName" class="form-label">Nombre del Empleado</label>
+                            <input asp-for="EmployeeName" class="form-control" />
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label">Correo</label>
+                            <input asp-for="Email" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PhoneNumber" class="form-label">Celular</label>
+                            <input asp-for="PhoneNumber" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="IdCard" class="form-label">Cedula</label>
+                            <input asp-for="Wage" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Position" class="form-label">Posición</label>
+                            <input asp-for="Position" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="DOB" class="form-label">Fecha de Nacimiento</label>
+                            <input asp-for="DOB" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="PayrollId" class="form-label">Id del payroll</label>
+                            <input asp-for="PayrollId" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="VacantionId" class="form-label">Id de las vacaciones</label>
+                            <input asp-for="VacantionId" class="form-control" />
+                        </div>
+
+                        <input type="hidden" asp-for="Id" />
+
+
+                        <input type="submit" value="@(editMode ? "Editar" : "Guardar")" class="btn btn-primary"/>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
