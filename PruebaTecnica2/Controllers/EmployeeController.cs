@@ -26,6 +26,7 @@ namespace PruebaTecnica2.Controllers
         {
             EmployeeViewModel vm = new();
             vm.Payrolls = await _payrollServices.GetAllViewModel();
+            vm.Vacantions = await _vacantionServices.GetAllViewModel();
             return View("SaveEmployee", vm);
         }
 
@@ -41,6 +42,7 @@ namespace PruebaTecnica2.Controllers
         {
             EmployeeViewModel vm = await _employeeServices.GetByIdViewModel(id);
             vm.Payrolls = await _payrollServices.GetAllViewModel();
+            vm.Vacantions = await _vacantionServices.GetAllViewModel();
             return View("SaveEmployee", vm);
         }
 

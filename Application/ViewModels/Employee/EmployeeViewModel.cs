@@ -21,6 +21,7 @@ namespace Application.ViewModels.Employee
 
         public double Wage { get; set; }
 
+        public string VacantionName { get; set; }
         public DateTime StartingDate { get; set; }
         public DateTime EndingDate { get; set; }
 

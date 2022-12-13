@@ -57,7 +57,9 @@
 
                         <div class="mb-3">
                             <label asp-for="VacantionId" class="form-label">Vacaciones</label>
-                            <input asp-for="VacantionId" class="form-control" />
+                            <select asp-for="VacantionId" asp-items="@(new SelectList(Model.Vacantions,"Id","VacantionName"))" class="form-control">
+                                <option value="0" disabled>Seleccione una opción</option>
+                            </select>
                         </div>
 
                         <input type="hidden" asp-for="Id" />

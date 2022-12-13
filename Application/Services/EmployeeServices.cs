@@ -76,6 +76,7 @@ namespace Application.Services
                 Wage = _payrollRepository.GetAmount(product.PayrollId),
                 //PayrollId = product.PayrollId,
                 //VacantionId = product.VacantionId,
+                VacantionName = _vacantionRepository.GetVacation(product.VacantionId),
                 StartingDate = _vacantionRepository.GetVacationStartingDate(product.VacantionId),
                 EndingDate = _vacantionRepository.GetVacantionEndingDate(product.VacantionId)
             }).ToList();
