@@ -104,6 +104,11 @@ namespace Database.Migrations
                     b.Property<DateTime>("StartingDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("VacationName")
+                        .IsRequired()
+                        .HasMaxLength(55)
+                        .HasColumnType("nvarchar(55)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Vacations", (string)null);

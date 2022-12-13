@@ -61,6 +61,7 @@ namespace Database
             #endregion
 
             #region vacantion
+            modelBuilder.Entity<Vacantion>().Property(vacantion => vacantion.VacationName).IsRequired().HasMaxLength(55);
             modelBuilder.Entity<Vacantion>().Property(vacantion => vacantion.StartingDate).IsRequired();
             modelBuilder.Entity<Vacantion>().Property(vacantion => vacantion.EndingDate).IsRequired();
             #endregion

@@ -67,5 +67,10 @@ namespace Application.Repository
         {
             return _dbContext.Set<Vacantion>().FindAsync(id).Result.EndingDate;
         }
+
+        public string GetVacation(int id)
+        {
+            return _dbContext.Set<Vacantion>().FindAsync(id).Result.VacationName;
+        }
     }
 }

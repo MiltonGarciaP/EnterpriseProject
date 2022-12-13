@@ -50,5 +50,10 @@ namespace PruebaTecnica2.Controllers
             await _payrollServices.Delete(id);
             return RedirectToAction("Index");
         }
+
+        public async Task<IActionResult> TotalPayroll()
+        {
+            return View(await _payrollServices.GetAllViewModel());
+        }
     }
 }

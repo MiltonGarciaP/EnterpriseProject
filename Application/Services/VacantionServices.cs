@@ -24,6 +24,7 @@ namespace Application.Services
         public async Task<VacantionViewModel> Add(VacantionViewModel vm)
         {
             Vacantion vacantion = new();
+            vacantion.VacationName = vm.VacantionName;
             vacantion.StartingDate = vm.StartingDate;
             vacantion.EndingDate = vm.EndingDate;
 
@@ -31,6 +32,7 @@ namespace Application.Services
 
             VacantionViewModel ovm = new();
             ovm.Id = vacantion.Id;
+            ovm.VacantionName = vacantion.VacationName;
             ovm.StartingDate = vacantion.StartingDate;
             ovm.EndingDate = vacantion.EndingDate;
 
@@ -50,6 +52,7 @@ namespace Application.Services
             return vacantionList.Select(vacantion => new VacantionViewModel
             {
                 Id = vacantion.Id,
+                VacantionName = vacantion.VacationName,
                 StartingDate = vacantion.StartingDate,
                 EndingDate = vacantion.EndingDate
                 
@@ -62,6 +65,7 @@ namespace Application.Services
 
             VacantionViewModel vm = new();
             vm.Id = order.Id;
+            vm.VacantionName = order.VacationName;
             vm.StartingDate = order.StartingDate;
             vm.EndingDate = order.EndingDate;
 
@@ -73,6 +77,7 @@ namespace Application.Services
             var vacantion = await _vacantionRepository.GetByIdAsync(vm.Id);
 
             vacantion.Id = vm.Id;
+            vacantion.VacationName = vm.VacantionName;
             vacantion.StartingDate = vm.StartingDate;
             vacantion.EndingDate = vm.EndingDate;
 

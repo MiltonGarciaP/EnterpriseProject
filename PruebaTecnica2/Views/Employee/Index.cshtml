@@ -19,14 +19,14 @@
                         <h6>Correo: @item.Email</h6>
                         <h6>Numero de celular: @item.PhoneNumber</h6>
                         <h6>Cedula: @item.IdCard</h6>
-                        <h6>Posición @item.Position</h6>
+                        <h6>Posición: @item.Position</h6>
                         <h6>Sueldo: RD$@item.Wage</h6>
                         <h6>Fecha de inicio de las vacaciones: @item.StartingDate</h6>
                         <h6>Fecha de finalización de las vacaciones: @item.EndingDate</h6>
                         
                         <div class="d-flex justify-content-between align-items-center gap-3">
                             <div>
-                                <a asp-controller="Employee" asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">Editar</a>
+                                <a onclick="showInPopup('@Url.Action("Update","Employee",new {id = item.Id},Context.Request.Scheme)','')" class="btn btn-sm btn-outline-info">Editar</a>
                                 <button type="button" data-id="@item.Id" class="btn btn-sm btn-outline-danger deleteBtn">Eliminar</button>
                             </div>
                         </div>

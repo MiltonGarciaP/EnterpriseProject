@@ -28,6 +28,7 @@ namespace Database.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    VacationName = table.Column<string>(type: "nvarchar(55)", maxLength: 55, nullable: false),
                     StartingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EndingDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },

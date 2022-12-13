@@ -9,10 +9,12 @@ namespace PruebaTecnica2.Controllers
     {
         private readonly EmployeeServices _employeeServices;
         private readonly PayrollServices _payrollServices;
+        private readonly VacantionServices _vacantionServices;
         public EmployeeController(ApplicationContext dbContext)
         {
             _employeeServices = new(dbContext);
             _payrollServices = new(dbContext);
+            _vacantionServices = new(dbContext);
         }
 
         public async Task<IActionResult> Index() 

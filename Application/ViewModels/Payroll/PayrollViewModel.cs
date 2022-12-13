@@ -21,6 +21,6 @@ namespace Application.ViewModels.Payroll
 
         public double Earning { get; set; }
 
-
+        public double Total { get; set; }
     }
 }

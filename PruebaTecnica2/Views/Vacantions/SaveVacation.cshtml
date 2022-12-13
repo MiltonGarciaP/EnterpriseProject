@@ -15,7 +15,12 @@
                 <div class="card-body">
 
                     <form asp-controller="Vacantions" asp-action="@(editMode ? "Update" : "Create")">
-                                                
+                              
+                        <div class="mb-3">
+                            <label asp-for="VacantionName" class="form-label">Nombre de las vacaciones</label>
+                            <input asp-for="VacantionName" class="form-control" />
+                        </div>
+
                         <div class="mb-3">
                             <label asp-for="StartingDate" class="form-label">Inicio de la vacaciones</label>
                             <input asp-for="StartingDate" class="form-control" />

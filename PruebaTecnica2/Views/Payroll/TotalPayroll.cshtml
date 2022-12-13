@@ -1,0 +1,14 @@
+﻿@model List<Application.ViewModels.Payroll.PayrollViewModel>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-6 mb-3">
+            <div class="card shadow-sm bg-dark">
+                <div class="card-body">
+                    <h1 class="text-white">Nomina: RD$@Model.Sum(x => x.Earnings)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -17,10 +17,12 @@ namespace Application.Services
     {
 
         private readonly PayrollRepository _payrollRepository;
+        private readonly ApplicationContext _dbContext;
 
         public PayrollServices(ApplicationContext dbContext)
         {
             _payrollRepository = new(dbContext);
+            _dbContext = dbContext;
         }
         public async Task<PayrollViewModel> Add(PayrollViewModel vm)
         {
@@ -54,13 +56,12 @@ namespace Application.Services
             {
                 
 
-            Id = client.Id,
+                Id = client.Id,
                 Earnings = client.Earnings,
                 afp = client.Earnings * 0.0287,
                 sfs = client.Earnings * 0.0304,
                 Discount = (client.Earnings * 0.0287) + (client.Earnings * 0.0304),
-                Earning = client.Earnings- ((client.Earnings * 0.0287) + (client.Earnings * 0.0304)),
-                
+                Earning = client.Earnings- ((client.Earnings * 0.0287) + (client.Earnings * 0.0304))
                 
                 
 

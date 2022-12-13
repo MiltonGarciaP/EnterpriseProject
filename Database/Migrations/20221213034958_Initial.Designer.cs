@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20221209042114_Initial")]
+    [Migration("20221213034958_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -105,6 +105,11 @@ namespace Database.Migrations
 
                     b.Property<DateTime>("StartingDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("VacationName")
+                        .IsRequired()
+                        .HasMaxLength(55)
+                        .HasColumnType("nvarchar(55)");
 
                     b.HasKey("Id");
 
