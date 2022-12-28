@@ -15,12 +15,14 @@ namespace Application.Services
         private readonly EmployeeRepository _employeeRepository;
         private readonly PayrollRepository _payrollRepository;
         private readonly VacantionRepository _vacantionRepository;
+        private readonly PositionRepository _positionRepository;
 
         public EmployeeServices(ApplicationContext dbContext)
         {
             _employeeRepository = new(dbContext);
             _payrollRepository = new(dbContext);
             _vacantionRepository = new(dbContext);
+            _positionRepository = new(dbContext);
         }
 
         public async Task<EmployeeViewModel> Add(EmployeeViewModel vm)
@@ -32,9 +34,9 @@ namespace Application.Services
             employee.PhoneNumber = vm.PhoneNumber;
             employee.DOB = vm.DOB;
             employee.DOA = vm.DOA;
-            employee.Position = vm.Position;
             employee.PayrollId = vm.PayrollId;
             employee.VacantionId = vm.VacantionId;
+            employee.PositionId = vm.PositionId;
 
             employee = await _employeeRepository.AddAsync(employee);
 
@@ -46,9 +48,9 @@ namespace Application.Services
             pvm.PhoneNumber = employee.PhoneNumber;
             pvm.DOB = employee.DOB;
             pvm.DOA = employee.DOA;
-            pvm.Position = employee.Position;
             pvm.PayrollId = employee.PayrollId;
             pvm.VacantionId = employee.VacantionId;
+            pvm.PositionId = employee.PositionId;
 
             return pvm;
         }
@@ -72,13 +74,13 @@ namespace Application.Services
                 IdCard = product.IdCard,
                 DOA = product.DOA,
                 DOB = product.DOB,
-                Position = product.Position,
                 Wage = _payrollRepository.GetAmount(product.PayrollId),
                 //PayrollId = product.PayrollId,
                 //VacantionId = product.VacantionId,
                 VacantionName = _vacantionRepository.GetVacation(product.VacantionId),
                 StartingDate = _vacantionRepository.GetVacationStartingDate(product.VacantionId),
-                EndingDate = _vacantionRepository.GetVacantionEndingDate(product.VacantionId)
+                EndingDate = _vacantionRepository.GetVacantionEndingDate(product.VacantionId),
+                PositionName = _positionRepository.GetPositionName(product.PositionId),
             }).ToList();
         }
 
@@ -94,9 +96,9 @@ namespace Application.Services
             vm.IdCard = employee.IdCard;
             vm.DOA = employee.DOA;
             vm.DOB = employee.DOB;
-            vm.Position = employee.Position;
             vm.PayrollId = employee.PayrollId;
             vm.VacantionId = employee.VacantionId;
+            vm.PositionId = employee.PositionId;
 
             return vm;
         }
@@ -112,9 +114,9 @@ namespace Application.Services
             employee.PhoneNumber = vm.PhoneNumber;
             employee.DOB = vm.DOB;
             employee.DOA = vm.DOA;
-            employee.Position = vm.Position;
             employee.PayrollId = vm.PayrollId;
             employee.VacantionId = vm.VacantionId;
+            employee.PositionId = vm.PositionId;
 
             await _employeeRepository.UpdateAsync(employee);
         }

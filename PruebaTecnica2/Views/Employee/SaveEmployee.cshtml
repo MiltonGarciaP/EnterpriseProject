@@ -39,8 +39,10 @@
                         </div>
 
                         <div class="mb-3">
-                            <label asp-for="Position" class="form-label">Posición</label>
-                            <input asp-for="Position" class="form-control" />
+                            <label asp-for="PositionId" class="form-label">Posición</label>
+                            <select asp-for="PositionId" asp-items="@(new SelectList(Model.Positions,"Id","PositionName"))" class="form-control">
+                                <option value="0" disabled>Seleccione una opción</option>
+                            </select>
                         </div>
 
                         <div class="mb-3">

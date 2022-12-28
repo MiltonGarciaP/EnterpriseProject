@@ -1,4 +1,5 @@
 ﻿using Application.ViewModels.Payroll;
+using Application.ViewModels.Position;
 using Application.ViewModels.Vacations;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace Application.ViewModels.Employee
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime DOA { get; set; }
-        public string Position { get; set; }
+        public string PositionName { get; set; }
 
         public double Wage { get; set; }
 
@@ -30,5 +31,8 @@ namespace Application.ViewModels.Employee
 
         public int VacantionId { get; set; }
         public List<VacantionViewModel> Vacantions { get; set; }
+
+        public int PositionId { get; set; }
+        public List<PositionViewModel> Positions { get; set; }
     }
 }

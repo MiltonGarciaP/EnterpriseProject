@@ -15,6 +15,7 @@ namespace Database
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Vacantion> Vacantions { get; set; }
         public DbSet<Payroll> Payrolls { get; set; }
+        public DbSet<Position> Positions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +29,7 @@ namespace Database
             modelBuilder.Entity<Employee>().HasKey(employee => employee.Id);
             modelBuilder.Entity<Vacantion>().HasKey(vacantion => vacantion.Id);
             modelBuilder.Entity<Payroll>().HasKey(payroll => payroll.Id);
+            modelBuilder.Entity<Position>().HasKey(position => position.Id);
             #endregion
 
             #region relationships
@@ -42,6 +44,12 @@ namespace Database
                 .WithOne(employee => employee.Vacantion)
                 .HasForeignKey(employee => employee.VacantionId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Position>()
+                .HasMany<Employee>(position => position.Employees)
+                .WithOne(employee => employee.Position)
+                .HasForeignKey(employee => employee.PositionId)
+                .OnDelete(DeleteBehavior.Cascade);
             #endregion
 
             #region property configurations
@@ -50,7 +58,6 @@ namespace Database
                 modelBuilder.Entity<Employee>().Property(employee => employee.EmployeeName).IsRequired().HasMaxLength(70);
                 modelBuilder.Entity<Employee>().Property(employee => employee.Email).IsRequired().HasMaxLength(50);
                 modelBuilder.Entity<Employee>().Property(employee => employee.PhoneNumber).IsRequired().HasMaxLength(10);
-                modelBuilder.Entity<Employee>().Property(employee => employee.Position).IsRequired().HasMaxLength(50);
                 modelBuilder.Entity<Employee>().Property(employee => employee.DOB).IsRequired();
                 modelBuilder.Entity<Employee>().Property(employee => employee.DOA).IsRequired();
                 modelBuilder.Entity<Employee>().Property(employee => employee.IdCard).IsRequired();
@@ -64,6 +71,10 @@ namespace Database
             modelBuilder.Entity<Vacantion>().Property(vacantion => vacantion.VacationName).IsRequired().HasMaxLength(55);
             modelBuilder.Entity<Vacantion>().Property(vacantion => vacantion.StartingDate).IsRequired();
             modelBuilder.Entity<Vacantion>().Property(vacantion => vacantion.EndingDate).IsRequired();
+            #endregion
+
+            #region position
+            modelBuilder.Entity<Position>().Property(position => position.PositionName).IsRequired().HasMaxLength(55);
             #endregion
 
             #endregion

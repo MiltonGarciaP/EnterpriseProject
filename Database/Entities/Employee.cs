@@ -16,7 +16,6 @@ namespace Database.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime DOA { get; set; }
-        public string Position { get; set; }
 
         public int VacantionId { get; set; }
         public Vacantion Vacantion { get; set; }
@@ -24,5 +23,8 @@ namespace Database.Entities
 
         public int PayrollId { get; set; }
         public Payroll Payroll { get; set; }
+
+        public int PositionId { get; set; }
+        public Position Position { get; set; }
     }
 }

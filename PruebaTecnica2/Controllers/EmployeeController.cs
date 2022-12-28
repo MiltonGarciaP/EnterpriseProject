@@ -10,11 +10,13 @@ namespace PruebaTecnica2.Controllers
         private readonly EmployeeServices _employeeServices;
         private readonly PayrollServices _payrollServices;
         private readonly VacantionServices _vacantionServices;
+        private readonly PositionServices _positionServices;
         public EmployeeController(ApplicationContext dbContext)
         {
             _employeeServices = new(dbContext);
             _payrollServices = new(dbContext);
             _vacantionServices = new(dbContext);
+            _positionServices = new(dbContext);
         }
 
         public async Task<IActionResult> Index() 
@@ -27,6 +29,7 @@ namespace PruebaTecnica2.Controllers
             EmployeeViewModel vm = new();
             vm.Payrolls = await _payrollServices.GetAllViewModel();
             vm.Vacantions = await _vacantionServices.GetAllViewModel();
+            vm.Positions = await _positionServices.GetAllViewModel();
             return View("SaveEmployee", vm);
         }
 
@@ -43,6 +46,7 @@ namespace PruebaTecnica2.Controllers
             EmployeeViewModel vm = await _employeeServices.GetByIdViewModel(id);
             vm.Payrolls = await _payrollServices.GetAllViewModel();
             vm.Vacantions = await _vacantionServices.GetAllViewModel();
+            vm.Positions = await _positionServices.GetAllViewModel();
             return View("SaveEmployee", vm);
         }
 

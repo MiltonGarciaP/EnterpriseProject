@@ -57,10 +57,8 @@ namespace Database.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
 
-                    b.Property<string>("Position")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                    b.Property<int>("PositionId")
+                        .HasColumnType("int");
 
                     b.Property<int>("VacantionId")
                         .HasColumnType("int");
@@ -68,6 +66,8 @@ namespace Database.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("PayrollId");
+
+                    b.HasIndex("PositionId");
 
                     b.HasIndex("VacantionId");
 
@@ -88,6 +88,24 @@ namespace Database.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Payrolls", (string)null);
+                });
+
+            modelBuilder.Entity("Database.Entities.Position", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("PositionName")
+                        .IsRequired()
+                        .HasMaxLength(55)
+                        .HasColumnType("nvarchar(55)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Positions");
                 });
 
             modelBuilder.Entity("Database.Entities.Vacantion", b =>
@@ -122,6 +140,12 @@ namespace Database.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Database.Entities.Position", "Position")
+                        .WithMany("Employees")
+                        .HasForeignKey("PositionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Database.Entities.Vacantion", "Vacantion")
                         .WithMany("Employees")
                         .HasForeignKey("VacantionId")
@@ -130,10 +154,17 @@ namespace Database.Migrations
 
                     b.Navigation("Payroll");
 
+                    b.Navigation("Position");
+
                     b.Navigation("Vacantion");
                 });
 
             modelBuilder.Entity("Database.Entities.Payroll", b =>
+                {
+                    b.Navigation("Employees");
+                });
+
+            modelBuilder.Entity("Database.Entities.Position", b =>
                 {
                     b.Navigation("Employees");
                 });
